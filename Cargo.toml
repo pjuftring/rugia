@@ -1,0 +1,25 @@
+[package]
+name = "rugia"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+
+[build-dependencies]
+#bindgen = "0.58.1"
+#gl_generator = "0.14.0"
+
+[profile.release]
+opt-level = 3
+debug = true
+split-debuginfo = '...'  # Platform-specific.
+debug-assertions = false
+overflow-checks = false
+lto = true
+panic = 'unwind'
+incremental = false
+codegen-units = 1
+rpath = false
