@@ -8,11 +8,11 @@
 )]
 
 pub mod gl {
-    include!("gl.rs");
+    include!("generated/gl.rs");
 }
 pub mod glfw {
-    include!("glfw.rs");
+    include!("generated/glfw.rs");
 }
 pub mod webp {
-    include!("webp.rs");
+    include!("generated/webp.rs");
 }
