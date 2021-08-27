@@ -6,10 +6,18 @@ use std::fs::File;
 
 pub fn main() {
     // Linking
-
-    //println!("cargo:rustc-link-search=.");
-    println!("cargo:rustc-link-lib=glfw");
-    println!("cargo:rustc-link-lib=webp");
+    if cfg!(windows) {
+        // Windows search path for libaries
+        println!("cargo:rustc-link-search=.");
+        println!("cargo:rustc-link-lib=glfw3");
+        println!("cargo:rustc-link-lib=webp");
+    } else { // unix
+        if cfg!(target_os = "freebsd") {
+            println!("cargo:rustc-link-search=/usr/local/lib");
+        }
+        println!("cargo:rustc-link-lib=glfw");
+        println!("cargo:rustc-link-lib=webp");
+    }
     
     // Rerun
     println!("cargo:rerun-if-changed=build.rs");
