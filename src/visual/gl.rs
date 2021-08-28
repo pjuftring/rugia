@@ -343,7 +343,7 @@ impl Vao {
     fn new(gl: &Gles2) -> Vao {
         let mut handles = [0];
         unsafe {
-            gl.GenVertexArraysOES(1, &mut handles as *mut _);
+            gl.GenVertexArraysOES(1, &mut handles as *mut [u32; 1] as *mut _);
         }
         Vao(handles[0])
     }
@@ -361,7 +361,7 @@ impl Buffer {
     fn new(gl: &Gles2) -> Buffer {
         let mut handles = [0];
         unsafe {
-            gl.GenBuffers(1, &mut handles as *mut _);
+            gl.GenBuffers(1, &mut handles as *mut [u32; 1] as *mut _);
         }
         Buffer(handles[0])
     }

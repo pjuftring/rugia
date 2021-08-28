@@ -10,7 +10,7 @@ This is mostly for playing around and having a project for learning Rust. In the
 
 For building, you need Rust, which you can get [here](https://rustup.rs/). Use `git clone https://github.com/pjuftring/rugia` in order to clone the project and run `cargo run`. This might produce some errors because of missing libraries. Continue as follows:
 
-### Linux (Ubuntu)
+### Linux (Debian based)
 
 You need to install `libglfw3-dev` and `libwebp-dev`, which you can do by typing
 ```
