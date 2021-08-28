@@ -1,9 +1,9 @@
-#version 100
+#version 130
 
 precision lowp float;
 
-varying vec3 pos_out;
-varying vec2 tex_out;
+in vec3 pos_out;
+in vec2 tex_out;
 
 uniform sampler2D tex;
 

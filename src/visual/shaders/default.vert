@@ -1,10 +1,10 @@
-#version 100
+#version 130
 
-attribute vec4 pos_in;
-attribute vec2 tex_in;
+in vec4 pos_in;
+in vec2 tex_in;
 
-varying vec3 pos_out;
-varying vec2 tex_out;
+out vec3 pos_out;
+out vec2 tex_out;
 
 uniform mat4 camera;
 uniform mat4 light;

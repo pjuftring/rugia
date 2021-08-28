@@ -20,23 +20,20 @@ impl Glfw {
     pub fn new() -> Self {
         unsafe {
             glfw::glfwInit();
-            glfw::glfwWindowHint(
-                glfw::GLFW_CLIENT_API as i32,
-                glfw::GLFW_OPENGL_ES_API as i32,
-            );
+            glfw::glfwWindowHint(glfw::GLFW_CLIENT_API as i32, glfw::GLFW_OPENGL_API as i32);
             /*glfw::glfwWindowHint(
                 glfw::GLFW_CONTEXT_CREATION_API as i32,
                 glfw::GLFW_NATIVE_CONTEXT_API as i32,
             );*/
-            glfw::glfwWindowHint(glfw::GLFW_CONTEXT_VERSION_MAJOR as i32, 2);
+            glfw::glfwWindowHint(glfw::GLFW_CONTEXT_VERSION_MAJOR as i32, 3);
             glfw::glfwWindowHint(glfw::GLFW_CONTEXT_VERSION_MINOR as i32, 0);
             glfw::glfwWindowHint(glfw::GLFW_DOUBLEBUFFER as i32, glfw::GLFW_TRUE as i32);
 
-            /*glfw::glfwWindowHint(
+            glfw::glfwWindowHint(
                 glfw::GLFW_OPENGL_FORWARD_COMPAT as i32,
                 glfw::GLFW_TRUE as i32,
             );
-            glfw::glfwWindowHint(
+            /*glfw::glfwWindowHint(
                 glfw::GLFW_OPENGL_PROFILE as i32,
                 glfw::GLFW_OPENGL_CORE_PROFILE as i32,
             );*/
